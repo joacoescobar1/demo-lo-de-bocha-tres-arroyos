@@ -307,3 +307,11 @@ table.data td img { width: 40px; height: 40px; border-radius: 8px; object-fit: c
   .qtyrow .btn { width: 100%; }
   .brand b { font-size: 18px; }
 }
+
+/* Sin fotos genéricas: bloques tipográficos con los colores de la marca */
+.rubro { background: linear-gradient(160deg, var(--amber) 0%, var(--petrol-ink) 100%); }
+.rubro:nth-child(even) { background: linear-gradient(160deg, var(--petrol) 0%, var(--petrol-ink) 100%); }
+.compare-photo { aspect-ratio: 1; background: linear-gradient(160deg, var(--petrol) 0%, var(--petrol-ink) 100%); }
+.card .pic { background: linear-gradient(160deg, var(--petrol) 0%, var(--petrol-ink) 100%); display: flex; align-items: center; justify-content: center; }
+.pic-ph { color: rgba(255,255,255,.88); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+.cart-ph { display: block; width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(160deg, var(--amber), var(--petrol-ink)); flex: none; }

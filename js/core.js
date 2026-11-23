@@ -157,7 +157,7 @@
     const updated = [];
     incoming.forEach((row) => {
       const prev = map.get(row.codigo);
-      const imagen = (prev && prev.imagen) || row.imagen || "img/fotos/estanteria.webp";
+      const imagen = (prev && prev.imagen) || row.imagen || "";
       const next = { ...prev, ...row, imagen };
       map.set(row.codigo, next);
       if (prev) updated.push(row.codigo);

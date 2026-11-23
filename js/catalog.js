@@ -42,7 +42,7 @@
       const st = RDN.stockLabel(p.stock);
       const out = p.stock <= 0;
       return `<article class="card" data-code="${esc(p.codigo)}">
-        <div class="pic"><img src="${esc(p.imagen)}" alt="${esc(p.nombre)}" loading="lazy" width="900" height="900">${rate < 0 ? `<span class="off">${rate}%</span>` : ""}</div>
+        <div class="pic"><span class="pic-ph" aria-hidden="true">${esc(p.rubro || "")}</span>${rate < 0 ? `<span class="off">${rate}%</span>` : ""}</div>
         <div class="body">
           <div class="sku">${esc(p.codigo)}</div>
           <h3>${esc(p.nombre)}</h3>
@@ -91,7 +91,7 @@
     const items = cartItems();
     $("cart-sub").textContent = `Con los precios de tu lista ${listName.toLowerCase()}`;
     $("cart-items").innerHTML = items.length ? items.map((i) => `<div class="cart-item">
-        <img src="${esc(i.imagen || "img/fotos/estanteria.webp")}" alt="">
+        <span class="cart-ph" aria-hidden="true"></span>
         <div><strong>${esc(i.nombre)}</strong><div class="meta">${esc(i.codigo)} · ${i.qty} × ${RDN.money(i.precio)}</div></div>
         <div><div class="amt">${RDN.money(i.qty * i.precio)}</div><button class="del" type="button" data-del="${esc(i.codigo)}">Quitar</button></div>
       </div>`).join("") : '<p class="hint" style="padding:24px 0">Tu pedido está vacío. Agregá productos desde el catálogo.</p>';
